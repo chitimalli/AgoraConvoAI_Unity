@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgoraRtcSDK", "AgoraRtcSDK.csproj", "{5F5CD400-6A18-A0A7-6F22-E51B670CFA55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{EAF8B30A-08E8-D8E3-A922-4787A1B05A85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{891447ED-1CB1-E08F-5A2C-3FE31DF33C7F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5F5CD400-6A18-A0A7-6F22-E51B670CFA55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F5CD400-6A18-A0A7-6F22-E51B670CFA55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F5CD400-6A18-A0A7-6F22-E51B670CFA55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F5CD400-6A18-A0A7-6F22-E51B670CFA55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAF8B30A-08E8-D8E3-A922-4787A1B05A85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAF8B30A-08E8-D8E3-A922-4787A1B05A85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAF8B30A-08E8-D8E3-A922-4787A1B05A85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAF8B30A-08E8-D8E3-A922-4787A1B05A85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{891447ED-1CB1-E08F-5A2C-3FE31DF33C7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{891447ED-1CB1-E08F-5A2C-3FE31DF33C7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{891447ED-1CB1-E08F-5A2C-3FE31DF33C7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{891447ED-1CB1-E08F-5A2C-3FE31DF33C7F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
