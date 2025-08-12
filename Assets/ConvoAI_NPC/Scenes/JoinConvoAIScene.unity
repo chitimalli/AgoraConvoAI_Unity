@@ -5007,8 +5007,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f79191e89eaa483d88305381f28723b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _appIdInput: {fileID: 11400000, guid: 300c6525f002a4dbaac41a5c4b054e35, type: 2}
-  _convoAIConfigs: {fileID: 11400000, guid: 41704d0a28cd440dd9d366c395ab08aa, type: 2}
+  _appIdInput: {fileID: 0}
+  _convoAIConfigs: {fileID: 0}
   _appID: 
   _token: 
   _channelName: 
