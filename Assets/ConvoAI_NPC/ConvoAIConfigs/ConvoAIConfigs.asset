@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0445a3d6f9ce14b2792b32b89f645e1a, type: 3}
   m_Name: ConvoAIConfigs
   m_EditorClassIdentifier: 
+  appID: 
+  token: 
+  channelName: 
   apiKey: 
   apiSecret: 
   agentName: 

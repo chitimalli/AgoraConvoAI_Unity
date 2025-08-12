@@ -10,6 +10,11 @@ namespace io.agora.rtc.demo
     [Serializable]
     public class ConvoAIConfigs : ScriptableObject
     {
+        public string appID = "";
+
+        public string token = "";
+
+        public string channelName = "YOUR_CHANNEL_NAME";
         public string apiKey = "";
         
         public string apiSecret = "";

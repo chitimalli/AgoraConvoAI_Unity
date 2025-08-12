@@ -18,10 +18,6 @@ namespace Agora_RTC_Plugin.API_Example.Examples.Basic.JoinConvoAIChannelAudio
 {
     public class JoinConvoAIChannelAudio : MonoBehaviour
     {
-        [FormerlySerializedAs("appIdInput")]
-        [SerializeField]
-        private AppIdInput _appIdInput;
-
         [SerializeField]
         private ConvoAIConfigs _convoAIConfigs;
 
@@ -142,12 +138,11 @@ namespace Agora_RTC_Plugin.API_Example.Examples.Basic.JoinConvoAIChannelAudio
         [ContextMenu("ShowAgoraBasicProfileData")]
         private void LoadAssetData()
         {
-            if (_appIdInput == null) return;
-            _appID = _appIdInput.appID;
-            _token = _appIdInput.token;
-            _channelName = _appIdInput.channelName;
 
             if (_convoAIConfigs == null) return;
+            _appID = _convoAIConfigs.appID;
+            _token = _convoAIConfigs.token;
+            _channelName = _convoAIConfigs.channelName;
             _apiKey = _convoAIConfigs.apiKey;
             _apiSecret = _convoAIConfigs.apiSecret;
             _agentName = _convoAIConfigs.agentName;
