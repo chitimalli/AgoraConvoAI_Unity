@@ -1,4 +1,8 @@
-﻿using System;
+﻿#define AGORA_RTC
+#define AGORA_FULL
+
+
+using System;
 using System.Linq;
 using UnityEngine;
 using System.Collections.Generic;
@@ -17,6 +21,9 @@ namespace Agora_RTC_Plugin.API_Example.Examples.Basic.JoinConvoAIChannelAudio
         [FormerlySerializedAs("appIdInput")]
         [SerializeField]
         private AppIdInput _appIdInput;
+
+        [SerializeField]
+        private ConvoAIConfigs _convoAIConfigs;
 
         [Header("_____________Basic Configuration_____________")]
         [FormerlySerializedAs("APP_ID")]
@@ -88,7 +95,15 @@ namespace Agora_RTC_Plugin.API_Example.Examples.Basic.JoinConvoAIChannelAudio
         public RectTransform _qualityPanel;
         public GameObject _qualityItemPrefab;
 
-        // Start is called before the first frame update
+
+        private void Awake()
+        {
+#if AGORA_RTC
+            PermissionHelper.RequestMicrophontPermission();
+            PermissionHelper.RequestCameraPermission();
+#endif
+        }
+            // Start is called before the first frame update
         private void Start()
         {
             LoadAssetData(); // Load _appID, _token, _channelName from asset
@@ -131,6 +146,22 @@ namespace Agora_RTC_Plugin.API_Example.Examples.Basic.JoinConvoAIChannelAudio
             _appID = _appIdInput.appID;
             _token = _appIdInput.token;
             _channelName = _appIdInput.channelName;
+
+            if (_convoAIConfigs == null) return;
+            _apiKey = _convoAIConfigs.apiKey;
+            _apiSecret = _convoAIConfigs.apiSecret;
+            _agentName = _convoAIConfigs.agentName;
+            _agentRtcUid = _convoAIConfigs.agentRtcUid;
+            _idleTimeout = _convoAIConfigs.idleTimeout;
+            _asrLanguage = _convoAIConfigs.asrLanguage;
+            _llmUrl = _convoAIConfigs.llmUrl;
+            _llmApiKey = _convoAIConfigs.llmApiKey;
+            _greetingMessage = _convoAIConfigs.greetingMessage;
+            _failureMessage = _convoAIConfigs.failureMessage;
+            _maxHistory = _convoAIConfigs.maxHistory;
+            _ttsKey = _convoAIConfigs.ttsKey;
+            _ttsRegion = _convoAIConfigs.ttsRegion;
+            _ttsVoiceName = _convoAIConfigs.ttsVoiceName;
         }
 
         private void PrepareAreaList()

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0445a3d6f9ce14b2792b32b89f645e1a, type: 3}
+  m_Name: ConvoAIConfigs
+  m_EditorClassIdentifier: 
+  apiKey: 
+  apiSecret: 
+  agentName: 
+  agentRtcUid: 0
+  idleTimeout: 0
+  asrLanguage: 
+  llmUrl: 
+  llmApiKey: 
+  greetingMessage: 
+  failureMessage: 
+  maxHistory: 0
+  ttsKey: 
+  ttsRegion: 
+  ttsVoiceName: 
