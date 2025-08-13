@@ -84,11 +84,7 @@ namespace Agora_RTC_Plugin.API_Example.Examples.Basic.JoinConvoAIChannelAudio
         internal Logger Log;
         internal IRtcEngine RtcEngine = null;
 
-        private IAudioDeviceManager _audioDeviceManager;
-        private DeviceInfo[] _audioPlaybackDeviceInfos;
-        public Dropdown _audioDeviceSelect;
-        public Dropdown _areaSelect;
-        public RectTransform _qualityPanel;
+       public RectTransform _qualityPanel;
         public GameObject _qualityItemPrefab;
 
 
@@ -103,7 +99,6 @@ namespace Agora_RTC_Plugin.API_Example.Examples.Basic.JoinConvoAIChannelAudio
         private void Start()
         {
             LoadAssetData(); // Load _appID, _token, _channelName from asset
-            PrepareAreaList();
             if (CheckAppId())
             {
                 RtcEngine = Agora.Rtc.RtcEngine.CreateAgoraRtcEngine();
@@ -123,8 +118,6 @@ namespace Agora_RTC_Plugin.API_Example.Examples.Basic.JoinConvoAIChannelAudio
 
             InitRtcEngine();
             LogText.text = "Agora RtcEngine initialized";
-           
-            
 
         }
 
@@ -164,37 +157,19 @@ namespace Agora_RTC_Plugin.API_Example.Examples.Basic.JoinConvoAIChannelAudio
             _ttsVoiceName = _convoAIConfigs.ttsVoiceName;
         }
 
-        private void PrepareAreaList()
-        {
-            int index = 0;
-            var areaList = new List<Dropdown.OptionData>();
-            var enumNames = Enum.GetNames(typeof(AREA_CODE));
-            foreach (var name in enumNames)
-            {
-                areaList.Add(new Dropdown.OptionData(name));
-                if (name == "AREA_CODE_GLOB")
-                {
-                    index = areaList.Count - 1;
-                }
-            }
-            _areaSelect.ClearOptions();
-            _areaSelect.AddOptions(areaList.ToList());
-            _areaSelect.value = index;
-        }
-
         #region -- Button Events ---
         public void InitRtcEngine()
         {
-            var text = this._areaSelect.captionText.text;
-            AREA_CODE areaCode = (AREA_CODE)Enum.Parse(typeof(AREA_CODE), text);
-            this.Log.UpdateLog("Select AREA_CODE : " + areaCode);
+            // var text = this._areaSelect.captionText.text;
+            // AREA_CODE areaCode = (AREA_CODE)Enum.Parse(typeof(AREA_CODE), text);
+            // this.Log.UpdateLog("Select AREA_CODE : " + areaCode);
 
             UserEventHandler handler = new UserEventHandler(this);
             RtcEngineContext context = new RtcEngineContext();
             context.appId = _appID;
             context.channelProfile = CHANNEL_PROFILE_TYPE.CHANNEL_PROFILE_LIVE_BROADCASTING;
             context.audioScenario = AUDIO_SCENARIO_TYPE.AUDIO_SCENARIO_DEFAULT;
-            context.areaCode = areaCode;
+            //context.areaCode = areaCode;
 
             var result = RtcEngine.Initialize(context);
             this.Log.UpdateLog("Initialize result : " + result);
@@ -342,35 +317,6 @@ namespace Agora_RTC_Plugin.API_Example.Examples.Basic.JoinConvoAIChannelAudio
             return _networkManager?.HasActiveAgent() ?? false;
         }
 
-        public void GetAudioPlaybackDevice()
-        {
-            _audioDeviceSelect.ClearOptions();
-            _audioDeviceManager = RtcEngine.GetAudioDeviceManager();
-            _audioPlaybackDeviceInfos = _audioDeviceManager.EnumeratePlaybackDevices();
-            Log.UpdateLog(string.Format("AudioPlaybackDevice count: {0}", _audioPlaybackDeviceInfos.Length));
-            for (var i = 0; i < _audioPlaybackDeviceInfos.Length; i++)
-            {
-                Log.UpdateLog(string.Format("AudioPlaybackDevice device index: {0}, name: {1}, id: {2}", i,
-                    _audioPlaybackDeviceInfos[i].deviceName, _audioPlaybackDeviceInfos[i].deviceId));
-            }
-
-            _audioDeviceSelect.AddOptions(_audioPlaybackDeviceInfos.Select(w =>
-                    new Dropdown.OptionData(
-                        string.Format("{0} :{1}", w.deviceName, w.deviceId)))
-                .ToList());
-        }
-
-        public void SelectAudioPlaybackDevice()
-        {
-            if (_audioDeviceSelect == null) return;
-            var option = _audioDeviceSelect.options[_audioDeviceSelect.value].text;
-            if (string.IsNullOrEmpty(option)) return;
-
-            var deviceId = option.Split(":".ToCharArray(), StringSplitOptions.RemoveEmptyEntries)[1];
-            var ret = _audioDeviceManager.SetPlaybackDevice(deviceId);
-            Log.UpdateLog("SelectAudioPlaybackDevice ret:" + ret + " , DeviceId: " + deviceId);
-        }
-
         #endregion
 
         private void OnDestroy()
@@ -380,6 +326,7 @@ namespace Agora_RTC_Plugin.API_Example.Examples.Basic.JoinConvoAIChannelAudio
             RtcEngine.InitEventHandler(null);
             RtcEngine.LeaveChannel();
             RtcEngine.Dispose();
+            StopConvoAIAgent();
         }
 
 
