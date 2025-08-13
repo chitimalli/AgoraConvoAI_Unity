@@ -220,7 +220,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &37464359
 RectTransform:
   m_ObjectHideFlags: 0
@@ -634,7 +634,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -0.000013695646, y: -0.000003022207}
-  m_SizeDelta: {x: 0, y: 1500}
+  m_SizeDelta: {x: 0, y: 1365.4}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &147931551
 GameObject:
@@ -1524,7 +1524,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 126.98999, y: -79}
-  m_SizeDelta: {x: 203.45, y: 64.14}
+  m_SizeDelta: {x: 224.5, y: 64.14}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &331629460
 MonoBehaviour:
@@ -1574,6 +1574,19 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: Agora_RTC_Plugin.API_Example.Examples.Basic.JoinConvoAIChannelAudio.JoinConvoAIChannelAudio,
           Assembly-CSharp
         m_MethodName: LeaveChannel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1347907990}
+        m_TargetAssemblyTypeName: Agora_RTC_Plugin.API_Example.Examples.Basic.JoinConvoAIChannelAudio.JoinConvoAIChannelAudio,
+          Assembly-CSharp
+        m_MethodName: StopConvoAIAgent
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2118,7 +2131,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &591845374
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2468,7 +2481,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &653347493
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2805,8 +2818,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -172.3}
-  m_SizeDelta: {x: 520, y: 1000}
+  m_AnchoredPosition: {x: 0, y: -321}
+  m_SizeDelta: {x: 520, y: 100}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &767388870
 MonoBehaviour:
@@ -3603,6 +3616,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1347907990}
+        m_TargetAssemblyTypeName: Agora_RTC_Plugin.API_Example.Examples.Basic.JoinConvoAIChannelAudio.JoinConvoAIChannelAudio,
+          Assembly-CSharp
+        m_MethodName: CreateConvoAIAgent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &846352114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4206,7 +4232,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1150095389
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4533,7 +4559,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 147931552}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.65533334
+  m_Size: 0.06078805
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -5165,7 +5191,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1517316115
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5984,8 +6010,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000030517578, y: 495.57}
-  m_SizeDelta: {x: 459.33, y: 61.1}
+  m_AnchoredPosition: {x: -0.000030517578, y: 714.5}
+  m_SizeDelta: {x: 459.33, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1890873739
 MonoBehaviour:
@@ -6035,7 +6061,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ----Audio Call----
+  m_Text: 
 --- !u!222 &1890873741
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6295,10 +6321,10 @@ RectTransform:
   m_Father: {fileID: 1347907989}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 430.9, y: 87.20001}
-  m_SizeDelta: {x: 861.8, y: 180}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -430.9, y: -167}
+  m_SizeDelta: {x: 861.80005, y: 180}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1909036380
 MonoBehaviour:

@@ -99,7 +99,7 @@ namespace Agora_RTC_Plugin.API_Example.Examples.Basic.JoinConvoAIChannelAudio
             PermissionHelper.RequestCameraPermission();
 #endif
         }
-            // Start is called before the first frame update
+        // Start is called before the first frame update
         private void Start()
         {
             LoadAssetData(); // Load _appID, _token, _channelName from asset
@@ -120,6 +120,11 @@ namespace Agora_RTC_Plugin.API_Example.Examples.Basic.JoinConvoAIChannelAudio
             GameObject.Find("Canvas/Scroll View/Viewport/Content/deviceIdSelect").SetActive(false);
             GameObject.Find("Canvas/Scroll View/Viewport/Content/AudioSelectButton").SetActive(false);
 #endif
+
+            InitRtcEngine();
+            LogText.text = "Agora RtcEngine initialized";
+           
+            
 
         }
 
