@@ -60,6 +60,9 @@ namespace Agora_RTC_Plugin.API_Example.Examples.Basic.JoinConvoAIChannelAudio
         private string _llmApiKey = "";
         
         [SerializeField]
+        private string _systemMessage = "";
+
+        [SerializeField]
         private string _greetingMessage = "";
         
         [SerializeField]
@@ -76,6 +79,8 @@ namespace Agora_RTC_Plugin.API_Example.Examples.Basic.JoinConvoAIChannelAudio
         
         [SerializeField]
         private string _ttsVoiceName = "";
+        
+
 
         // Reference to networking manager
         private ConvoAINWMgr _networkManager;
@@ -149,6 +154,7 @@ namespace Agora_RTC_Plugin.API_Example.Examples.Basic.JoinConvoAIChannelAudio
             _asrLanguage = _convoAIConfigs.asrLanguage;
             _llmUrl = _convoAIConfigs.llmUrl;
             _llmApiKey = _convoAIConfigs.llmApiKey;
+            _systemMessage = _convoAIConfigs.systemMessage;
             _greetingMessage = _convoAIConfigs.greetingMessage;
             _failureMessage = _convoAIConfigs.failureMessage;
             _maxHistory = _convoAIConfigs.maxHistory;
@@ -305,6 +311,7 @@ namespace Agora_RTC_Plugin.API_Example.Examples.Basic.JoinConvoAIChannelAudio
         public string TtsKey => _ttsKey;
         public string TtsRegion => _ttsRegion;
         public string TtsVoiceName => _ttsVoiceName;
+        public string SystemMessage => _systemMessage;
 
         // ConvoAI Agent Status Methods
         public string GetCurrentAgentId()

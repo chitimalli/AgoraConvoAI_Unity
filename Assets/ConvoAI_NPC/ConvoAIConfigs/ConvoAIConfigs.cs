@@ -31,6 +31,8 @@ namespace io.agora.rtc.demo
         
         public string llmApiKey = "";
         
+        public string systemMessage = "";
+
         public string greetingMessage = "";
         
         public string failureMessage = "";
@@ -42,5 +44,6 @@ namespace io.agora.rtc.demo
         public string ttsRegion = "";
         
         public string ttsVoiceName = "";
+        
     }
 }
