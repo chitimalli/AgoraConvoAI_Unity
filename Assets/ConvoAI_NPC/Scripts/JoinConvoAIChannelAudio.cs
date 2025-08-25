@@ -330,9 +330,9 @@ namespace Agora_RTC_Plugin.API_Example.Examples.Basic.JoinConvoAIChannelAudio
         }
 
 
-        public LocalAudioCallQualityPanel1 GetLocalAudioCallQualityPanel()
+        public LocalAudioCallQualityPanel GetLocalAudioCallQualityPanel()
         {
-            var panels = this._qualityPanel.GetComponentsInChildren<LocalAudioCallQualityPanel1>();
+            var panels = this._qualityPanel.GetComponentsInChildren<LocalAudioCallQualityPanel>();
             if (panels != null && panels.Length > 0)
             {
                 return panels[0];
@@ -348,7 +348,7 @@ namespace Agora_RTC_Plugin.API_Example.Examples.Basic.JoinConvoAIChannelAudio
             if (GetLocalAudioCallQualityPanel() == null)
             {
                 GameObject item = GameObject.Instantiate(this._qualityItemPrefab, this._qualityPanel);
-                item.AddComponent<LocalAudioCallQualityPanel1>();
+                item.AddComponent<LocalAudioCallQualityPanel>();
                 return true;
             }
 
@@ -369,9 +369,9 @@ namespace Agora_RTC_Plugin.API_Example.Examples.Basic.JoinConvoAIChannelAudio
             }
         }
 
-        public RemoteAudioCallQualityPanel1 GetRemoteAudioCallQualityPanel(uint uid)
+        public RemoteAudioCallQualityPanel GetRemoteAudioCallQualityPanel(uint uid)
         {
-            var panels = this._qualityPanel.GetComponentsInChildren<RemoteAudioCallQualityPanel1>();
+            var panels = this._qualityPanel.GetComponentsInChildren<RemoteAudioCallQualityPanel>();
             foreach (var panel in panels)
             {
                 if (panel.Uid == uid)
@@ -388,7 +388,7 @@ namespace Agora_RTC_Plugin.API_Example.Examples.Basic.JoinConvoAIChannelAudio
             if (GetRemoteAudioCallQualityPanel(uid) == null)
             {
                 GameObject item = GameObject.Instantiate(this._qualityItemPrefab, this._qualityPanel);
-                var panel = item.AddComponent<RemoteAudioCallQualityPanel1>();
+                var panel = item.AddComponent<RemoteAudioCallQualityPanel>();
                 panel.Uid = uid;
                 return true;
 
@@ -1157,11 +1157,7 @@ namespace Agora_RTC_Plugin.API_Example.Examples.Basic.JoinConvoAIChannelAudio
             _audioSample.Log.UpdateLog($"Generated Auth Header: {generatedAuthHeader}");
             _audioSample.Log.UpdateLog($"JavaScript Working Header: Basic MzdiYzU5OWE0MTYwNDAzYzk5ZDg1OTQyODIxYWQ0ODU6ZTA1ZjI2ZTkxNzc1NGYzNWJjOTgxNzhiMWY5M2QxZTU=");
             
-            // TEMPORARY: Use the working JavaScript header until we fix the credential mismatch
-            string workingAuthHeader = "Basic MzdiYzU5OWE0MTYwNDAzYzk5ZDg1OTQyODIxYWQ0ODU6ZTA1ZjI2ZTkxNzc1NGYzNWJjOTgxNzhiMWY5M2QxZTU=";
-            _audioSample.Log.UpdateLog("Using working JavaScript auth header temporarily");
-            
-            return workingAuthHeader;
+            return generatedAuthHeader;
         }
 
         /// <summary>

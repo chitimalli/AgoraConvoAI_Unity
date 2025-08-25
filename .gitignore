@@ -86,5 +86,5 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
-#Lets hide the Configs the secrets
-#/Assets/ConvoAI_NPC/Scripts/ConvoAIConfigs
+#Hide any Game/Project related Assets
+/Assets
