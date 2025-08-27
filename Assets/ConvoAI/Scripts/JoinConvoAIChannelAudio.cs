@@ -92,7 +92,6 @@ namespace Agora_RTC_Plugin.API_Example.Examples.Basic.JoinConvoAIChannelAudio
        public RectTransform _qualityPanel;
         public GameObject _qualityItemPrefab;
 
-
         private void Awake()
         {
 #if AGORA_RTC
@@ -173,7 +172,7 @@ namespace Agora_RTC_Plugin.API_Example.Examples.Basic.JoinConvoAIChannelAudio
             UserEventHandler handler = new UserEventHandler(this);
             RtcEngineContext context = new RtcEngineContext();
             context.appId = _appID;
-            context.channelProfile = CHANNEL_PROFILE_TYPE.CHANNEL_PROFILE_LIVE_BROADCASTING;
+            context.channelProfile = CHANNEL_PROFILE_TYPE.CHANNEL_PROFILE_COMMUNICATION;
             context.audioScenario = AUDIO_SCENARIO_TYPE.AUDIO_SCENARIO_DEFAULT;
             //context.areaCode = areaCode;
 
@@ -509,7 +508,7 @@ namespace Agora_RTC_Plugin.API_Example.Examples.Basic.JoinConvoAIChannelAudio
                              "\"llm\":{" +
                              "\"url\":\"" + _audioSample.LlmUrl + "\"," +
                              "\"api_key\":\"" + _audioSample.LlmApiKey + "\"," +
-                             "\"system_messages\":[{\"role\":\"system\",\"content\":\"You are a helpful chatbot.\"}]," +
+                             "\"system_messages\":[{\"role\":\"system\",\"content\":\""+ _audioSample.SystemMessage + "\"}]," +
                              "\"greeting_message\":\"" + _audioSample.GreetingMessage + "\"," +
                              "\"failure_message\":\"" + _audioSample.FailureMessage + "\"," +
                              "\"max_history\":" + _audioSample.MaxHistory + "," +
