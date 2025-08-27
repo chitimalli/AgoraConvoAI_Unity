@@ -98,6 +98,9 @@ TTS Voice Name: [Voice name, e.g., "en-US-JennyNeural"]
    - Add UI Text component for logging (assign to LogText field)
    - Set up quality monitoring panels if needed
 
+This demo used a Free Unity Asset called :https://assetstore.unity.com/packages/templates/systems/santa-claus-is-coming-to-town-3d-game-template-63497 
+Credit: PixelShenanigans
+
 ### 4. Integration with NPCs
 
 The system uses an interface-based architecture for easy NPC integration:
