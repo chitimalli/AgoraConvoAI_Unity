@@ -4,6 +4,8 @@ A Unity package that integrates Agora's Conversational AI engine with real-time 
 
 <img width="966" height="546" alt="Screenshot 2025-08-26 at 1 18 35 PM" src="https://github.com/user-attachments/assets/ccb51428-4101-404e-805f-7608f5c693ba" />
 
+Watch the youtube GamePlay here: https://www.youtube.com/watch?v=4t_2K87Fx9I
+
 ## 🚀 Features
 
 - **Real-time Voice Communication**: Powered by Agora RTC SDK
